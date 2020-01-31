@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  font-family: "Rockwell";
+  font-size: 16px;
+  overflow-y: hidden;
+  background-color: #212121;
+
+}
+
+main {
+  z-index: 1;
+}
+
+main > *{
+  width: 100%;
+  height: 100%;
+}
+
+/* El lado donde aparecen los cartelitos de guia */
+.right-side {
+  position: fixed;
+  right: 2em;
+  top: 0;
+  height: 100%;
+  width: 25%;
+  display: block;
+}
+.right-side > *{
+  position: absolute;
+  width: 100%;
+  background: hsla(0, 0%, 80%, 0.333333);
+  color: #000;
+  padding: 0.1em 0.5em;
+}
+.right-side .top-corner {
+  top: 2em;
+}
+.right-side .bottom-corner {
+  bottom: 2em;
+}
+
+/* Las diapositivas */
+/* Estilos generales */
+h2 {
+  text-align: center;
+  font-size: 3em;
+  border-bottom: 2px dashed #cccccc;
+  max-width: 18em;
+  margin: 1em auto;
+}
+main p, main li {
+  font-size: 1em;
+  margin: 0.5em 1em;
+  max-width: calc(100vw / 3);
+  min-width: 25em;
+}
+.text-columns {
+  overflow: auto;
+}
+.text-columns > p{
+  float: left;
+}
+.with-floated {
+  overflow: auto;
+}
+/* La primera diapositiva */
+.titulo-pag {
+  background: url("http://i2.esmas.com/editorial-televisa/2012/06/01/379367/via-lactea-1920x1080.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: #440044;
+  height: 100vh; /* * 0.68767507002*/
+}
+section img {
+  width: 100%;
+  height: 100%;
+}
+.titulo-pag img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.titulo-pag svg {
+  display: block;
+  margin: auto;
+  width: 75%;
+  height: 75%;
+  text-align: center;
+}
+.titulo-pag svg text {
+  font-family: "Open Sans";
+  font-size: 256px;
+}
+
+
+/* Todos los elementos visibles de navegación */
+#bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.navegation {
+  margin: 0 auto 10vh auto;
+  text-align: center;
+}
+.navegation svg {
+  max-width: 10vw;
+  max-height: 10vh;
+}
+.down-box {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 15vh;
+  text-align: center;
+  vertical-align: middle;
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 100%, 0), 
+    hsla(0, 0%, 100%, 0.1)
+  );
+}
+.down-arrow {
+  display: inline;
+  cursor: pointer;
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.down-arrow line {
+  stroke-width: 8px;
+  transition: stroke 1s;
+}
+.navegation nav {
+  display: table;
+  margin: 0 auto;
+}
+.navegation nav > li{
+  display: table-cell;
+  text-align: center;
+  font-size: 5em;
+  padding: 1vh calc(10vw - 1.5em);
+}
+.navegation nav > li > a {
+  text-decoration: none;
+  color: hsla(0, 0%, 89%, 0.8);
+  text-shadow: 2px 2px hsla(0, 0%, 0%, 1) ;
+}
+.navegation nav > li > a {
+  text-decoration: none;
+  color: hsla(0, 0%, 89%, 0.8);
+}
+.navegation nav > li > a.closest {
+  font-size: 1.33333333333em;
+  position: relative;
+  top: 0.1em;
+}
+
+
+/* Representa una diapositiva o más bien el tamaño de la pantalla*/
+#win {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
